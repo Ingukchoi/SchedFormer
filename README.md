@@ -11,8 +11,23 @@ Flexible Job Shop Scheduling with Diverse Constraints
 </p>
 
 >This repository is the official implementation of our paper "**Towards a Unified Model for Flexible Job Shop Scheduling with Diverse Constraints**", The Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS 2026).
->The code builds upon [DAN](https://github.com/wrqccc/fjsp-drl) repository. Our code will be released soon.
+>The code builds upon [DAN](https://github.com/wrqccc/fjsp-drl) repository.
 
 <p align="center">
   <img src="./framework.png" width="700">
 </p>
+
+---
+
+### FJSSP variants
+
+
+| Tag | Constraint | 
+|-----|------------|
+| `R` | Release dates | 
+| `S` | Sequence-dependent setup times | 
+| `M` | Machine maintenance | 
+| `T` | Transportation times |
+
+Any subset can be combined, giving **16 variants** from `FJSSP` (no constraints) up to
+`FJSSP-RSMT` (all four). Our code will be released soon. Stay tuned! 😍
