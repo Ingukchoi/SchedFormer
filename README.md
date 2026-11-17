@@ -24,13 +24,25 @@ Each block employs an attention mechanism specialized for its target graph, whil
 
 ## FJSSP variants
 
+Any subset can be combined, giving **16 FJSSP variants**.
 
-| Tag | Constraint | 
-|-----|------------|
-| `R` | Release dates | 
-| `S` | Sequence-dependent setup times | 
-| `M` | Machine maintenance | 
-| `T` | Transportation times |
+| FJSSP variants | Classic FJSSP | Release dates<br>(R) | Sequence-dependent setup times<br>(S) | Machine maintenance<br>(M) | Transportation times<br>(T) |
+|:---------------|:-------------:|:--------------------:|:------------------:|:--------------------------:|:---------------------------:|
+| **FJSSP**      | ✓ |   |   |   |   |
+| **FJSSP-R**    | ✓ | ✓ |   |   |   |
+| **FJSSP-S**    | ✓ |   | ✓ |   |   |
+| **FJSSP-M**    | ✓ |   |   | ✓ |   |
+| **FJSSP-T**    | ✓ |   |   |   | ✓ |
+| **FJSSP-RT**   | ✓ | ✓ |   |   | ✓ |
+| **FJSSP-RS**   | ✓ | ✓ | ✓ |   |   |
+| **FJSSP-RM**   | ✓ | ✓ |   | ✓ |   |
+| **FJSSP-SM**   | ✓ |   | ✓ | ✓ |   |
+| **FJSSP-ST**   | ✓ |   | ✓ |   | ✓ |
+| **FJSSP-MT**   | ✓ |   |   | ✓ | ✓ |
+| **FJSSP-RSM**  | ✓ | ✓ | ✓ | ✓ |   |
+| **FJSSP-RST**  | ✓ | ✓ | ✓ |   | ✓ |
+| **FJSSP-RMT**  | ✓ | ✓ |   | ✓ | ✓ |
+| **FJSSP-SMT**  | ✓ |   | ✓ | ✓ | ✓ |
+| **FJSSP-RSMT** | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-Any subset can be combined, giving **16 variants** from `FJSSP` (no constraints) up to
-`FJSSP-RSMT` (all four). Our code will be released soon. Stay tuned! 😍
+### Our code will be released soon. Stay tuned! 😍
