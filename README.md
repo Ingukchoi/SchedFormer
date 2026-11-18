@@ -76,8 +76,14 @@ SchedFormer/
 ```
 
 ### 💾 Data
-Test instances live in `data/Synthetic/{variant}/{n_j}x{n_m}/*.npz` - 16 problem variants
-× 3 instance sizes × 100 instances (≈360 MB, ≈2.8 GB unpacked). The datasets used in the experiments can be downloaded from the following anonymized OSF repository: **[LINK](https://osf.io/ckdgu/overview?view_only=e876396d6b3b4764a34f0eae9dde5b31)**
+
+The benchmark datasets used in our experiments are available in
+[GitHub Releases](https://github.com/Ingukchoi/SchedFormer/releases/tag/dataset-v1.0).
+The datasets contain 16 problem variants × 3 instance sizes × 100 instances
+(≈360 MB compressed, ≈2.8 GB uncompressed).
+Download and extract the datasets into the `data/` directory.
+Test instances follow the directory structure:
+`data/Synthetic/{variant}/{n_j}x{n_m}/*.npz`.
 
 ---
 
