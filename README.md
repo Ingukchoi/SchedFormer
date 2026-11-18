@@ -11,7 +11,7 @@ Flexible Job Shop Scheduling with Diverse Constraints
   <a href="https://openreview.net/forum?id=sE50rZRh2S"><img src="https://img.shields.io/badge/NeurIPS%202026-Paper-B31B1B"></a>
 </p>
 
->This repository is the official implementation of our paper "**Towards a Unified Model for Flexible Job Shop Scheduling with Diverse Constraints**", The Fortieth Annual Conference on Neural Information Processing Systems (**NeurIPS 2026**).
+>This repository is the official implementation of our paper, "**Towards a Unified Model for Flexible Job Shop Scheduling with Diverse Constraints**", The Fortieth Annual Conference on Neural Information Processing Systems (**NeurIPS 2026**).
 >The code builds upon [DAN](https://github.com/wrqccc/fjsp-drl) repository.
 
 <p align="center">
