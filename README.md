@@ -8,6 +8,7 @@ Flexible Job Shop Scheduling with Diverse Constraints
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=pytorch&logoColor=white"></a>
   <a href="https://pytorch-geometric.readthedocs.io/"><img src="https://img.shields.io/badge/PyTorch%20Geometric-6A0DAD?logo=pytorch&logoColor=white"></a>
+  <a href="https://openreview.net/forum?id=sE50rZRh2S"><img src="https://img.shields.io/badge/Paper-OpenReview-B31B1B"></a>
 </p>
 
 >This repository is the official implementation of our paper "**Towards a Unified Model for Flexible Job Shop Scheduling with Diverse Constraints**", The Fortieth Annual Conference on Neural Information Processing Systems (**NeurIPS 2026**).
