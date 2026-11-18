@@ -45,4 +45,66 @@ Any subset can be combined, giving **16 FJSSP variants**.
 | **FJSSP-SMT**  | ✓ |   | ✓ | ✓ | ✓ |
 | **FJSSP-RSMT** | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-### Our code will be released soon. Stay tuned! 😍
+## Quick Start
+
+### ⚙️ **Requirements**
+- `python=3.10.15`
+- `torch==2.2.0`
+- `torch_geometric==2.5.2`
+- `numpy==1.26.4`
+- `tqdm==4.66.5`
+
+---
+
+### 🗂️ Repository layout
+
+```
+SchedFormer/
+├── train.py              # training (Adaptive self-improvement learning)
+├── test.py               # inference (greedy / sampling)
+├── test_heuristic.py     # PDRs
+├── data_utils.py         # instance generator + dataset writer
+├── SFEnv.py              # Unified FJSSP simulator (MultiFJSSPEnv)
+├── common_utils.py       # graph construction, action selection, heuristics, seeding
+├── params.py             # all command-line arguments
+├── model/
+│   ├── SchedFormer.py    # model network
+│   ├── attention_layer.py# attention blocks
+│   └── sub_layers.py     # MLP, RMSNorm, SwiGLU
+├── data/Synthetic/       # generated test instances, {variant}/{size}/*.npz
+└── train_results/        # trained checkpoints, {run}/FJSSP/models/checkpoint{n}.pth
+```
+
+### 💾 Data
+Test instances live in `data/Synthetic/{variant}/{n_j}x{n_m}/*.npz` - 16 problem variants
+× 3 instance sizes × 100 instances (≈360 MB, ≈2.8 GB unpacked). The datasets used in the experiments can be downloaded from the following anonymized OSF repository: **[LINK](https://osf.io/ckdgu/overview?view_only=e876396d6b3b4764a34f0eae9dde5b31)**
+
+---
+
+### 🏃 **Train**
+
+```bash
+# single problem variant (here: all four constraints active)
+python train.py --run_name SF_RSMT \
+                --flag_ready True --flag_setup True --flag_maintenance True --flag_trans True \
+                --n_j 10 --n_m 5
+
+# multi-task over the 4 single-constraint variants
+python train.py --run_name SF_4V --flag_multi True --flag_full False
+
+# multi-task over all 16 variants
+python train.py --run_name SF_16V --flag_multi True --flag_full True
+```
+
+---
+
+### 🏃‍♂️ **Test**
+
+```bash
+# greedy decoding
+python test.py --test_model SF_16V --epoch 4000 --test_problem FJSSP-RSMT --test_size 10x5
+
+# sampling: draw 100 schedules per instance, keep the best
+python test.py --test_model SF_16V --epoch 4000 --test_problem FJSSP-RSMT --test_size 10x5 \
+               --test_mode True --sample_times 100
+```
