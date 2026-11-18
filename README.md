@@ -114,3 +114,14 @@ python test.py --test_model SF_16V --epoch 4000 --test_problem FJSSP-RSMT --test
 python test.py --test_model SF_16V --epoch 4000 --test_problem FJSSP-RSMT --test_size 10x5 \
                --test_mode True --sample_times 100
 ```
+---
+📝 If you find our code valuable for your research, please cite:
+```bibtex
+@inproceedings{
+choi2026towards,
+title={Towards a Unified Model for Flexible Job Shop Scheduling with Diverse Constraints},
+author={Choi, Inguk and Shin, Woo-Jin and Cho, Sang-Hyun and Kim, Hyun-Jung},
+booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
+year={2026}
+}
+```
